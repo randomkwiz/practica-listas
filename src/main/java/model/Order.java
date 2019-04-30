@@ -1,10 +1,12 @@
 /*
-* Clase: OrderImpl
-* 
+* Clase: Order
+*
 * */
 package main.java.model;
 import java.util.ArrayList;
 import java.util.List;
+
+import main.java.util.Articulo;
 import main.java.util.ListaArticulos;
 
 public class Order {
@@ -14,6 +16,7 @@ public class Order {
 		this.consumer = consumer;
 		this.supermarket = supermarket;
 		this.orderLines = new ArrayList<OrderLine>();
+		this.linkedOrderLines = new ListaArticulos();
 	}
 
 	private Integer code;
@@ -97,7 +100,8 @@ public class Order {
 	 * INTERFAZ
 	 * Comentario: Este método devuelve el objeto de tipo OrderLine cuya posicion coincida con la pasada por parametros, de la lista de orderLines.
 	 * Signatura: public OrderLine getOrderLine(int position)
-	 * Precondiciones: Por valor se pasa un entero que es la posición del objeto en la lista que se devolverá
+	 * Precondiciones: Por valor se pasa un entero que es la posición del objeto en la lista que se devolverá.
+	 * 					La posicion debera ser una posicion existente dentro de la lista.
 	 * Entradas: int position
 	 * Salidas: objeto OrderLine
 	 * Postcondiciones: asociado al nombre se devuelve un objeto OrderLine que es el elemento x de la lista, donde x es la posicion pasada por parámetro.
@@ -111,24 +115,31 @@ public class Order {
 	//SEGUNDA PARTE
 	public void addLinkedOrderLine(OrderLine orderLine) {
 		//TODO Añadir artículo
+		Articulo art = new Articulo();
+		art.setOrderLine(orderLine);
+		linkedOrderLines.add(art);
 		
 	}
 	
 	public void removeLinkedOrderLine(OrderLine orderLine) {
 		//TODO Eliminar artículo
+		Articulo art = new Articulo();
+		art.setOrderLine(orderLine);
+		linkedOrderLines.remove(art);
 		
 	}
 	
 	public OrderLine getLinkedOrderLine(int position) {
 		//TODO Coger artículo
-		
-		return null;
+		Articulo art ;
+		art = linkedOrderLines.get(position);
+		return art.getOrderLine();
 	}
 	
 	public OrderLine getLastOrderLine() {
 		//TODO Coger último artículo
-		
-		return null;
+
+		return linkedOrderLines.get(linkedOrderLines.getSize()-1).getOrderLine();
 	}
 	
 	//TERCERA PARTE

@@ -104,7 +104,8 @@ public class Supermarket {
 	 * INTERFAZ
 	 * Comentario: Este método devuelve el objeto de tipo Product cuya posicion coincida con la pasada por parametros, de la lista de products.
 	 * Signatura: public Product getProduct(int position)
-	 * Precondiciones: Por valor se pasa un entero que es la posición del objeto en la lista que se devolverá
+	 * Precondiciones: Por valor se pasa un entero que es la posición del objeto en la lista que se devolverá.
+	 * 					La posicion debera ser una posicion existente dentro de la lista.
 	 * Entradas: int position
 	 * Salidas: objeto Product
 	 * Postcondiciones: asociado al nombre se devuelve un objeto Product que es el elemento x de la lista, donde x es la posicion pasada por parámetro.
@@ -151,7 +152,8 @@ public class Supermarket {
 	 * INTERFAZ
 	 * Comentario: Este método devuelve el objeto de tipo Order cuya posicion coincida con la pasada por parametros, de la lista de orders.
 	 * Signatura: public Order getOrder(int position)
-	 * Precondiciones: Por valor se pasa un entero que es la posición del objeto en la lista que se devolverá
+	 * Precondiciones: Por valor se pasa un entero que es la posición del objeto en la lista que se devolverá.
+	 * 					La posicion debera ser una posicion existente dentro de la lista.
 	 * Entradas: int position
 	 * Salidas: objeto Order
 	 * Postcondiciones: asociado al nombre se devuelve un objeto Order que es el elemento x de la lista, donde x es la posicion pasada por parámetro.

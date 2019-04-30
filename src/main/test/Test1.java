@@ -37,7 +37,7 @@ public class Test1 {
 		System.out.println(s1.getOrder(0));
 
 		System.out.println(s1.getProduct(0));
-		/*
+
 		o1.getOrderLines().add(ol1);
 		o1.getOrderLines().add(ol2);
 		
@@ -54,7 +54,7 @@ public class Test1 {
 		
 		System.out.println(s1.getOrders().get(0));
 		System.out.println(s1.getProducts().get(0));
-*/
+
 
 		
 	}
