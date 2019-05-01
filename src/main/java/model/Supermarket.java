@@ -68,101 +68,76 @@ public class Supermarket {
 	
 	//Métodos a completar
 	//PRIMERA PARTE
-
-	/*
-	 * INTERFAZ
-	 * Comentario: Este método añade un objeto de tipo Product a la lista products de la clase Supermarket
-	 * Signatura: public void addProduct(Product product)
-	 * Precondiciones: Por referencia se pasa un objeto de tipo Product
-	 * Entradas: Product product
-	 * Salidas:
-	 * Postcondiciones: asociado al nombre no devuelve nada. Queda añadido un objeto más a la lista products.
-	 * */
+	
+	/* INTERFAZ
+	 * Comentario: A�ade un producto a la lista de productos
+	 * Prototipo: public void addProduct(Product product)
+	 * Entrada: Un Product a a�adir
+	 * Precondiciones: No hay
+	 * Salida: No hay
+	 * Postcondiciones: A�ade un producto a la lista de productos
+	 */
 	public void addProduct(Product product) {
-		//TODO Añadir producto
 		products.add(product);
-		
 	}
-
-	/*
-	 * INTERFAZ
-	 * Comentario: Este método elimina un objeto de tipo Product de la lista products de la clase Supermarket. Elimina la primera coincidencia, si existe.
-	 * Signatura: public void removeProduct(Product product)
-	 * Precondiciones: Por referencia se pasa un objeto de tipo Product
-	 * Entradas: Product product
-	 * Salidas:
-	 * Postcondiciones: asociado al nombre no devuelve nada. Queda eliminado un objeto de la lista products, que será la primera
-	 * 					coincidencia, si la hubiera.
-	 * */
+	
+	/* INTERFAZ
+	 * Comentario: Borra un producto de la lista de productos
+	 * Prototipo: public void removeProduct(Product product)
+	 * Entrada: Un Product a borrar
+	 * Precondiciones: No hay
+	 * Salida: No hay
+	 * Postcondiciones: Borrar el producto determinado de la lista, si el producto no se encuentra en la lista, no hace nada.
+	 */
 	public void removeProduct(Product product) {
-		//TODO Eliminar producto
 		products.remove(product);
-		
 	}
-
-	/*
-	 * INTERFAZ
-	 * Comentario: Este método devuelve el objeto de tipo Product cuya posicion coincida con la pasada por parametros, de la lista de products.
-	 * Signatura: public Product getProduct(int position)
-	 * Precondiciones: Por valor se pasa un entero que es la posición del objeto en la lista que se devolverá.
-	 * 					La posicion debera ser una posicion existente dentro de la lista.
-	 * Entradas: int position
-	 * Salidas: objeto Product
-	 * Postcondiciones: asociado al nombre se devuelve un objeto Product que es el elemento x de la lista, donde x es la posicion pasada por parámetro.
-	 * */
+	
+	/* INTERFAZ
+	 * Comentario: Obtiene un producto dada una posicion de la lista
+	 * Prototipo: public Product getProduct(int position)
+	 * Entrada: Un int con la posicion del producto
+	 * Precondiciones: La posicion a buscar debe existir
+	 * Salida: el Product de la posicion determinada
+	 * Postcondiciones: Asociado al nombre devuelve el producto de la posicion determinada.
+	 */
 	public Product getProduct(int position) {
-		//TODO Obtener producto
-
 		return products.get(position);
 	}
-
-	/*
-	 * INTERFAZ
-	 * Comentario: Este método añade un objeto de tipo Order a la lista orders de la clase Supermarket
-	 * Signatura: public void addOrder(Order order)
-	 * Precondiciones: Por referencia se pasa un objeto de tipo Order
-	 * Entradas: Order order
-	 * Salidas:
-	 * Postcondiciones: asociado al nombre no devuelve nada. Queda añadido un objeto más a la lista orders.
-	 * */
+	
+	/* INTERFAZ
+	 * Comentario: A�ade un pedido (order) a la lista de pedidos
+	 * Prototipo: public void addOrder(Order order)
+	 * Entrada: Un Order con el pedido a a�adir
+	 * Precondiciones: No hay
+	 * Salida: No hay
+	 * Postcondiciones: El Order determinado queda a�adido en la lista
+	 */
 	public void addOrder(Order order) {
-		//TODO Añadir pedido
 		orders.add(order);
-		
 	}
-
-	/*
-	 * INTERFAZ
-	 * Comentario: Este método elimina un objeto de tipo Order de la lista orders de la clase Supermarket. Elimina la primera coincidencia, si existe.
-	 * Signatura: public void removeOrder(Order order)
-	 * Precondiciones: Por referencia se pasa un objeto de tipo Order
-	 * Entradas: Order order
-	 * Salidas:
-	 * Postcondiciones: asociado al nombre no devuelve nada. Queda eliminado un objeto de la lista orders, que será la primera
-	 * 					coincidencia, si la hubiera.
-	 * */
+	
+	/* INTERFAZ
+	 * Comentario: Borra un pedido de la lista de pedidos
+	 * Prototipo: public void removeOrder(Order order)
+	 * Entrada: El Order a borrar de la lista de pedidos
+	 * Precondiciones: No hay
+	 * Salida: No hay
+	 * Postcondiciones: Borra el pedido determinado de la lista, si el pedido no existe, no borra nada.
+	 */
 	public void removeOrder(Order order) {
-		//TODO Eliminar pedido
 		orders.remove(order);
-		
 	}
-
-
-	/*
-	 * INTERFAZ
-	 * Comentario: Este método devuelve el objeto de tipo Order cuya posicion coincida con la pasada por parametros, de la lista de orders.
-	 * Signatura: public Order getOrder(int position)
-	 * Precondiciones: Por valor se pasa un entero que es la posición del objeto en la lista que se devolverá.
-	 * 					La posicion debera ser una posicion existente dentro de la lista.
-	 * Entradas: int position
-	 * Salidas: objeto Order
-	 * Postcondiciones: asociado al nombre se devuelve un objeto Order que es el elemento x de la lista, donde x es la posicion pasada por parámetro.
-	 * */
+	
+	/* INTERFAZ
+	 * Comenario: Obtiene un pedido de la lista de pedidos dada una posicion
+	 * Prototipo: public Order getOrder(int position)
+	 * Entrada: Un int con la posicion del pedido a obtener
+	 * Precondiciones: La posicion debe existir en la lista
+	 * Salida: el Order de la posicion determinada
+	 * Postcondiciones: Asociado al nombre devuelve el Order de la posici�n determinada
+	 */
 	public Order getOrder(int position) {
-		//TODO Obtener pedido
-
-
-		
 		return orders.get(position);
 	}
 	
